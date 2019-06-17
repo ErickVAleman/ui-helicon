@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Typography, Button, TextField, Paper, Grid } from "@material-ui/core";
+import { Typography, Button, TextField, Paper, Grid, Container } from "@material-ui/core";
 import './App.css';
 
 class App extends Component {
@@ -26,7 +26,9 @@ class App extends Component {
   async componentWillMount(){
     try{
       const response = await this.fetchPhrase('https://api-helicon.herokuapp.com/api/v1/upperPhrase');
+      console.log(response)
       this.setState({upperPhrase: response.result})
+
     } catch(err) {
       console.log(err);
     }
@@ -52,7 +54,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <header className="App-header">
+        <Container className="App-header">
           <form onSubmit={this.onSubmitChange} >
             <Paper style={{ minWidth: 270, minHeight: 200, padding: 10 }} >
                 <Grid container spacing={3} >
@@ -73,10 +75,15 @@ class App extends Component {
                         <Button variant="contained" component="span" >Enviar</Button>
                       </label>
                     </Grid>
+                    <Grid item xs={12} >
+                    </Grid>
                 </Grid>
             </Paper>    
           </form>
-        </header>
+          <footer>
+            <span> I ❤️ <a href='https://github.com/ErickVAleman/ui-helicon' >GitHub</a></span>
+          </footer>
+        </Container>
       </div>
     );
   }
