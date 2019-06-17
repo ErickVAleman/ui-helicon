@@ -58,25 +58,27 @@ class App extends Component {
           <form onSubmit={this.onSubmitChange} >
             <Paper style={{ minWidth: 270, minHeight: 200, padding: 10 }} >
                 <Grid container spacing={3} >
-                    <Grid item xs={12} >
-                        <Typography color="primary" variant="h3" >Upper Phrases</Typography>
-                    </Grid>
-                    <Grid item xs={12} >
-                        <TextField id="input-text" name="sendPhrase" label="phrase" margin="normal" variant="outlined" fullWidth onChange={this.handleChange} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <div>
-                            <Typography color="primary" variant="h5" >{this.state.upperPhrase}</Typography>
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} >
-                      <input type='submit' id="submitForm" style={{ display: 'none' }} />
-                      <label htmlFor="submitForm" >
-                        <Button variant="contained" component="span" >Enviar</Button>
-                      </label>
-                    </Grid>
-                    <Grid item xs={12} >
-                    </Grid>
+                  <Grid item xs={12} >
+                      <Typography color="primary" variant="h3" >Upper Phrases</Typography>
+                  </Grid>
+                  <Grid item xs={12} >
+                      <TextField id="input-text" name="sendPhrase" label="phrase" margin="normal" variant="outlined" fullWidth onChange={this.handleChange} />
+                  </Grid>
+                  <Grid item xs={12}>
+                      <div>
+                          <Typography color="primary" variant="h5" >{this.state.upperPhrase}</Typography>
+                      </div>
+                  </Grid>
+                  <Grid item xs={12} >
+                    <input type='submit' id="submitForm" style={{ display: 'none' }} />
+                    <label htmlFor="submitForm" >
+                      <Button variant="contained" component="span" >Enviar</Button>
+                    </label>
+                  </Grid>
+                  <Grid item xs={12} >
+                  </Grid>
+                  <Grid item xs={12}>
+                  </Grid>
                 </Grid>
             </Paper>    
           </form>
