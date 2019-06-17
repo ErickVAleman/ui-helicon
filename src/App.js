@@ -58,7 +58,7 @@ class App extends Component {
       <div className="App">
         <Container className="App-header">
           <form onSubmit={this.onSubmitChange} >
-            <Paper style={{ padding: 10, width: 500 }} >
+            <Paper style={{ padding: 10 }} >
                 <Grid container spacing={3} >
                   <Grid item xs={12} >
                       <Typography color="primary" variant="h3" >Bloq Mayus</Typography>
